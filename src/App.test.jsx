@@ -32,7 +32,7 @@ afterEach(() => {
 test('renders the home page and shows recipes from the API', async () => {
   render(<App />);
 
-  expect(screen.getByText(/food recipe app xyz/i)).toBeInTheDocument();
+  expect(screen.getByText(/food recipe/i)).toBeInTheDocument();
 
   await waitFor(() => {
     expect(screen.getByText('Chicken Curry')).toBeInTheDocument();

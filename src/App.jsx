@@ -13,7 +13,6 @@ function App() {
   const [search, setSearch] = useState('chicken');
   const [recipe, setRecipe] = useState([]);
   const [error, setError] = useState('');
-  const unusedValue = 123;
 
   const appId = '3f0b0f24';
   const appKey = 'dc238ab05b5c748aa0b1d9e968fbd01d';
