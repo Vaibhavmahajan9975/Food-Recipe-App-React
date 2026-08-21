@@ -2,12 +2,16 @@ import React from "react";
 
 const Header = (props) => {
   return (
-    <div className="jumbotron">
+    <header className="jumbotron">
       <h1 className="display-1">
-        <i className="material-icons brand-icon">fastfood</i>Food Recipe
+        <i className="material-icons brand-icon">fastfood</i>Food Recipe for ci-cd changes
       </h1>
       <div className="input-group w-50 mx-auto">
+        <label htmlFor="recipe-search" className="sr-only">
+          Search recipe
+        </label>
         <input
+          id="recipe-search"
           type="text"
           className="form-control"
           placeholder="Search Your Recipe...."
@@ -15,13 +19,16 @@ const Header = (props) => {
           onChange={props.on}
         />
         <div className="input-group-append">
-          <button className="btn btn-dark" onClick={props.onSearchClick}>
-            {" "}
-            Search Recipess{" "}
+          <button
+            type="button"
+            className="btn btn-dark"
+            onClick={props.onSearchClick}
+          >
+            Search Recipes
           </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
