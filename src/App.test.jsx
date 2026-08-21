@@ -33,8 +33,9 @@ test('renders the home page and shows recipes from the API', async () => {
   render(<App />);
 
   expect(screen.getByText(/food recipe/i)).toBeInTheDocument();
-app xyz/i)).toBeInTheDocument();
-(screen.getByText('Chicken Curry')).toBeInTheDocument();
+
+  await waitFor(() => {
+    expect(screen.getByText('Chicken Curry')).toBeInTheDocument();
   });
 
   expect(axios.get).toHaveBeenCalledTimes(1);
