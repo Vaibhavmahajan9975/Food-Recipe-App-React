@@ -17,7 +17,7 @@ const Header = (props) => {
         <div className="input-group-append">
           <button className="btn btn-dark" onClick={props.onSearchClick}>
             {" "}
-            Search Recipess{" "}
+            Search Recipes
           </button>
         </div>
       </div>
